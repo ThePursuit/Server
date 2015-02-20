@@ -1,0 +1,16 @@
+application: robust-zenith-847
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+# Endpoint handler
+- url: /_ah/spi/.*
+  script: helloworld_api.APPLICATION
+
+libraries:
+- name: pycrypto
+  version: latest
+- name: endpoints
+  version: 1.0
